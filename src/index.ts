@@ -4,8 +4,10 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
+import router from "./router"
 
 const app = express();
+const port = 8080;
 
 app.use(cors({
     credentials: true,
@@ -17,7 +19,9 @@ app.use(bodyParser.json());
 
 const server = http.createServer(app);
 
-server.listen(8080, () => {
-    console.log("Server running on http://localhost:8080/");
+server.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}/`);
 });
+
+app.use('/', router());
 
