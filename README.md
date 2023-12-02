@@ -1,6 +1,8 @@
 # Cogetix-Backend
  REST Api voor proef project Cogetix stageplaats 23-24
 
+ rm -rf node_modules package-lock.json
+ npm install
  npm start to start
 
  Post + http://localhost:8080/api/games        Create - Add a new game
