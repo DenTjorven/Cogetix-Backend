@@ -31,7 +31,7 @@ export const updateGame = (req: Request, res: Response): void => {
   const gameId = parseInt(req.params.id, 10);
   const updatedGame: Game = req.body;
   const games = UpdateGame(gameId, updatedGame);
-  
+
   if (games) {
     res.json(games);
   } else {
